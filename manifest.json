@@ -1,0 +1,36 @@
+{
+  "name": "GitHub Conversation overhaul",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Allow reddit-like functions to ease the use of GitHub conversation",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "options_ui": {
+    "page": "src/options.html",
+    "open_in_tab": false
+  },
+  "permissions": [
+    "https://www.github.com/*",
+    "https://github.com/*",
+    "storage",
+    "webNavigation"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.github.com/*",
+        "https://github.com/*"
+      ],
+      "css": [
+        "src/inject.css"
+      ],
+      "js": [
+        "src/inject.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
