@@ -15,8 +15,7 @@
   "permissions": [
     "https://www.github.com/*",
     "https://github.com/*",
-    "storage",
-    "webNavigation"
+    "storage"
   ],
   "content_scripts": [
     {
